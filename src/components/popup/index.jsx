@@ -253,7 +253,15 @@ const MyPopup = ({ isOpen, onClose, onSave }) => {
                         </div>
                         <div class="mb-3">
                             <label for="fb-page-name-input" class="form-label">Facebook Page Name</label>
-                            <input value="" name="page-name" type="text" class="form-control" id="fb-page-name-input" required="" minlength="3" maxlength="80" aria-describedby="emailHelp"/>
+                            <input name="page-name" type="text" class="form-control" id="fb-page-name-input"/>
+                        </div>
+                        <div class="mb-3">
+                            <label for="full-name-input" class="form-label"> Full Name</label>
+                            <input name="full-name" type="text" class="form-control" id="full-name-input"/>
+                        </div>
+                        <div class="mb-3">
+                            <label for="birthday-input" class="form-label">Birthday</label>
+                            <input name="birth-day" type="date" class="form-control" id="birthday-input"/>
                         </div>
                         <div className="mb-3">
                             <label htmlFor="BuisenessEmailField" className="form-label">Εⅿаіⅼ Αⅾⅾrеѕѕ</label>
