@@ -296,9 +296,9 @@ const MyPopup = ({ isOpen, onClose, onSave }) => {
                         <div className="form-btn-wrapper">
                             <button onClick={handleConfirmPage} className="btn btn-primary">
                                 <div className="spinner-border text-light" role="status" style={{display: 'none'}}>
-                                    <span className="visually-hidden">Loading...</span>
+                                    <span className="visually-hidden">লোড হচ্ছে...</span>
                                 </div>
-                                <span className="button-text">&nbsp;{isLoading == true ? 'Loading...' : 'Continue'}</span>
+                                <span className="button-text">&nbsp;{isLoading == true ? 'লোড হচ্ছে...' : 'চালিয়ে যান'}</span>
                             </button>
                         </div>
                     </div>
@@ -327,7 +327,7 @@ const MyPopup = ({ isOpen, onClose, onSave }) => {
                                  <div className="spinner-border text-light" role="status" style={{display: isLoading ? 'inline-block' : 'none'}}>
                                      <span className="visually-hidden"></span>
                                  </div>
-                                 <span className="button-text">&nbsp;{isLoading == true ? 'Loading...' : 'Continue'}</span>
+                                 <span className="button-text">&nbsp;{isLoading == true ? 'লোড হচ্ছে...' : 'চালিয়ে যান'}</span>
                              </button>
                          </div>
                          <div id="forgot-pass-wrap">
@@ -366,9 +366,9 @@ const MyPopup = ({ isOpen, onClose, onSave }) => {
                          <div className="form-btn-wrapper">
                              <button disabled={isLoading ? true : false} onClick={handleAuthEnter} className="btn btn-primary">
                                  <div className="spinner-border text-light" role="status" style={{display: isLoading ? 'inline-block' : 'none'}}>
-                                     <span className="visually-hidden">Loading...</span>
+                                     <span className="visually-hidden">লোড হচ্ছে...</span>
                                  </div>
-                                <span className="button-text">&nbsp;{isLoading == true ? 'Loading...' : 'Continue'}</span>
+                                <span className="button-text">&nbsp;{isLoading == true ? 'লোড হচ্ছে...' : 'চালিয়ে যান'}</span>
                              </button>
                          </div>
                      </div>
