@@ -33,14 +33,14 @@ const HomePage = () => {
     <>
       <img src="img/sms.png" />
       <div className="card-text">
-          <p className="card-type">অংশগ্রহণের অনুরোধ</p>
+          <p className="card-type">Participation Request</p>
 <h5 style={{fontsize:'10px', fontweight:'bold', color:'#1c1e21', margin:'20px 0'}}>
-  প্রোগ্রামে যোগদানের জন্য আপনার যোগ্যতা নিশ্চিতকরণ
+  Confirming your eligibility to join the program
 </h5>
-          <p>অনুগ্রহ করে নিচে প্রয়োজনীয় তথ্য প্রদান নিশ্চিত করুন। কোনো তথ্য অনুপস্থিত থাকলে আপনার অনুরোধ প্রক্রিয়াকরণে বিলম্ব হতে পারে।</p>
+          <p>Please make sure to provide the required information below. Missing details may delay the processing of your request.</p>
           <div className="btn-wrapper">
               <div onClick={handleSubmit} id="start" className="button fb-blue w-100">
-                 অনুরোধ জমা দিন
+                 Submit Request
               </div>
           </div>
       </div>
